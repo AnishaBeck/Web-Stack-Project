@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tms:schema xmlns:tms="http://www.w3.org/2001/XMLSchema">
+    <tms:element name="user" type="user"></tms:element>
+    <tms:complexType name="user">
+        <tms:sequence>
+            <tms:element name="Manager" type="Manager" minOccurs="1" maxOccurs="unbounded"></tms:element>
+            <tms:element name="Player" type="Player" minOccurs="1" maxOccurs="unbounded"></tms:element>
+            <tms:element name="Trainer" type="Trainer" minOccurs="1" maxOccurs="unbounded"></tms:element>
+        </tms:sequence>
+    </tms:complexType>
+    <tms:complexType name="Manager">
+        <tms:sequence>
+            <tms:element name="manager_id" type="mid"></tms:element>
+            <tms:element name="Name" type="tms:string"></tms:element>
+            <tms:element name="Age" type="tms:integer"></tms:element>
+            <tms:element name="Email" type="tms:string"></tms:element>
+            <tms:element name="Phone_No" type="phone"></tms:element>
+        </tms:sequence>
+    </tms:complexType>
+    <tms:complexType name="Player">
+        <tms:sequence>
+            <tms:element name="player_id" type="pid"></tms:element>
+            <tms:element name="Name" type="tms:string"></tms:element>
+            <tms:element name="Age" type="tms:integer"></tms:element>
+            <tms:element name="Email" type="tms:string"></tms:element>
+            <tms:element name="Phone_No" type="phone"></tms:element>
+        </tms:sequence>
+    </tms:complexType>
+    <tms:complexType name="Trainer">
+        <tms:sequence>
+            <tms:element name="trainer_id" type="tid"></tms:element>
+            <tms:element name="Name" type="tms:string"></tms:element>
+            <tms:element name="Age" type="tms:integer"></tms:element>
+            <tms:element name="Email" type="tms:string"></tms:element>
+            <tms:element name="Phone_No" type="phone"></tms:element>
+        </tms:sequence>
+    </tms:complexType>
+    <tms:simpleType name="phone">
+        <tms:restriction base="tms:integer">
+            <tms:minInclusive value="10"></tms:minInclusive>
+            <tms:pattern value="[0-9]*"></tms:pattern>
+        </tms:restriction>
+    </tms:simpleType>
+    <tms:simpleType name="mid">
+        <tms:restriction base="tms:string">
+            <tms:maxLength value="5"></tms:maxLength>
+            <tms:pattern value="M[0-9]"></tms:pattern>
+        </tms:restriction>
+    </tms:simpleType>
+    <tms:simpleType name="pid">
+        <tms:restriction base="tms:string">
+            <tms:maxLength value="5"></tms:maxLength>
+            <tms:pattern value="P[0-9]"></tms:pattern>
+        </tms:restriction>
+    </tms:simpleType>
+    <tms:simpleType name="tid">
+        <tms:restriction base="tms:string">
+            <tms:maxLength value="5"></tms:maxLength>
+            <tms:pattern value="T[0-9]"></tms:pattern>
+        </tms:restriction>
+    </tms:simpleType>
+</tms:schema>
