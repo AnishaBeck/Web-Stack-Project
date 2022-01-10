@@ -5,7 +5,7 @@
             <body>
                 <h1 style="text-align:center">Admin Dashboard</h1>
                 <h2>Managers:</h2>
-                <table>
+                <table border="0.8">
                     <tr>
                         <th style="text-align:left">Manager_ID</th>
                         <th style="text-align:left">Name</th>
@@ -37,7 +37,7 @@
                     </xsl:for-each>
                 </table>
                 <h2>Players:</h2>
-                <table>
+                <table border="0.8">
                     <tr>
                         <th style="text-align:left">Player_ID</th>
                         <th style="text-align:left">Name</th>
@@ -94,7 +94,7 @@
                     </xsl:for-each>
                 </table>
                 <h2>Trainers:</h2>
-                <table>
+                <table border="0.8">
                     <tr>
                         <th style="text-align:left">Trainer_ID</th>
                         <th style="text-align:left">Name</th>
