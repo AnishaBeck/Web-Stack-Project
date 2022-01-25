@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ignite>
+    <modules>
+        <modulename>TWOTWOFOUR</modulename>
+        <title>USER DETAILS</title>
+
+        <user>
+            <Manager>
+                <manager_id>M1</manager_id>
+                <Name>Suresh Ram</Name>
+                <Age>34</Age>
+                <Email>sureshram123@gmail.com</Email>
+                <Phone_No>8735116352</Phone_No>
+            </Manager>
+            <Manager>
+                <manager_id>M2</manager_id>
+                <Name>Lila Singh</Name>
+                <Age>31</Age>
+                <Email>lilasingh@gmail.com</Email>
+                <Phone_No>8472392839</Phone_No>
+            </Manager>
+            <Manager>
+                <manager_id>M3</manager_id>
+                <Name>Adil</Name>
+                <Age>36</Age>
+                <Email>adil1887@gmail.com</Email>
+                <Phone_No>7938392028</Phone_No>
+            </Manager>
+            <Player>
+                <player_id>P1</player_id>
+                <Name>Ram Suresh</Name>
+                <Age>19</Age>
+                <Email>sureshram13@gmail.com</Email>
+                <Phone_No>8738416352</Phone_No>
+            </Player>
+            <Player>
+                <player_id>P2</player_id>
+                <Name>Rohan</Name>
+                <Age>17</Age>
+                <Email>rohankr@gmail.com</Email>
+                <Phone_No>8368389832</Phone_No>
+            </Player>
+            <Player>
+                <player_id>P3</player_id>
+                <Name>Jose</Name>
+                <Age>21</Age>
+                <Email>joseanthony@gmail.com</Email>
+                <Phone_No>8127389384</Phone_No>
+            </Player>
+            <Trainer>
+                <trainer_id>T1</trainer_id>
+                <Name>Ramesh</Name>
+                <Age>33</Age>
+                <Email>ramesh@gmail.com</Email>
+                <Phone_No>8738416942</Phone_No>
+            </Trainer>
+            <Trainer>
+                <trainer_id>T2</trainer_id>
+                <Name>Steve</Name>
+                <Age>31</Age>
+                <Email>steveie42@gmail.com</Email>
+                <Phone_No>8748932916</Phone_No>
+            </Trainer>
+        </user>
+
+    </modules>
+
+
+</ignite>
