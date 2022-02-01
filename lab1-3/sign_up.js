@@ -75,10 +75,7 @@ $(document).ready(function(){
           $("pass").css("border","4px solid red");
       }
       buttonState();
-  });
-
-
-  
+  }); 
   
 });
 function buttonState(){
