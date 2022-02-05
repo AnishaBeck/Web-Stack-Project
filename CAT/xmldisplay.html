@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STUDENT DETAILS</title>
+  </head>
+  <body onload="loadXML()">
+    <div class="col-7">
+      <h2 style="text-align: center">DISPLAY STUDENTS</h2>
+      \
+      <div id="dis"></div>
+      <table id="table" border="1%"></table>
+    </div>
+    <script type="text/javascript">
+      /*--JS for DOM Parser--*/
+
+      var xmlDoc;
+      var xmlFile = "form1.xml";
+
+      //function to load xml doc
+      function loadXML() {
+        var xmlReq = new XMLHttpRequest();
+        xmlReq.onreadystatechange = function () {
+          console.log(xmlReq.readyState);
+          if (xmlReq.readyState == 4 && xmlReq.status == 200) {
+            //xml doc successfully retrieved
+            xmlDoc = xmlReq.responseXML;
+            myFunction();
+          }
+        };
+        xmlReq.open("GET", xmlFile, true);
+        xmlReq.send();
+      }
+
+      function myFunction(xml) {
+        document.getElementById("dis").innerHTML =
+          xmlDoc.getElementsByTagName("STU-NAME")[0].nodeName;
+      }
+    </script>
+  </body>
+</html>
