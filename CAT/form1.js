@@ -199,46 +199,48 @@ user_pswd.addEventListener('keyup', ()=>{
 
 // Cookies code:
 
-const createCookies = () => {
-    const key = document.getElementById("user").value
-    const value = document.getElementById("email").value
- 
-      const value2 = document.getElementById("phone").value
-    document.cookie = `${key}=${value}; expires=Thu, 10 feb 2022 00:00:00 UTC;  path=/` 
-localStorage.setItem(value2,value);
-}
-
-//xmldisplay js
-/*--JS for DOM Parser--*/
-
-var xmlDoc
-var xmlFile = 'form1.xml'
-
-//function to load xml doc
-function loadXML()
+function createCookies()
 {
-    var xmlReq = new XMLHttpRequest;
-    xmlReq.onreadystatechange = function()
+    var phone = document.getElementById("user_phone").value
+    var email = document.getElementById("user_email").value
+    if((phone.trim() != "")  && (email.trim() != ""))
     {
-        console.log(xmlReq.readyState)
-        if((xmlReq.readyState == 4) && (xmlReq.status == 200))
-        {
-            //xml doc successfully retrieved
-            xmlDoc = xmlReq.responseXML
-            myFunction();
-           
-        }
+        document.cookie = "Phone=" + phone + ";expires=Sun, 30 Jan 2022 00:00:00 UTC;"
+        document.cookie = "email=" + email + ";expires=Sun, 30 Jan 2022 00:00:00 UTC;"
+        localStorage.setItem('Phone',phone)
+        localStorage.setItem('email', email)
+        window.location.reload()
     }
-    xmlReq.open('GET', xmlFile, true)
-    xmlReq.send()
+    else
+    {
+        alert("Form Incomplete")
+    }
 }
+// //function to load xml doc
+// function loadXML()
+// {
+//     var xmlReq = new XMLHttpRequest;
+//     xmlReq.onreadystatechange = function()
+//     {
+//         console.log(xmlReq.readyState)
+//         if((xmlReq.readyState == 4) && (xmlReq.status == 200))
+//         {
+//             //xml doc successfully retrieved
+//             xmlDoc = xmlReq.responseXML
+//             myFunction();
+           
+//         }
+//     }
+//     xmlReq.open('GET', xmlFile, true)
+//     xmlReq.send()
+// }
 
-function myFunction(xml) {
+// function myFunction(xml) {
    
-    document.getElementById("dis").innerHTML =
-    xmlDoc.getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue;
+//     document.getElementById("dis").innerHTML =
+//     xmlDoc.getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue;
     
 
    
-    }
+//     }
 

@@ -1,40 +1,77 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
-    <title>STUDENT DETAILS</title>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style>
+      table {
+        border: 1px solid black;
+        width: 100%;
+      }
+      th {
+        height: 70px;
+      }
+      td {
+        text-align: center;
+      }
+    </style>
+    <!-- Title Page-->
+    <title>Student Details</title>
+
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
   </head>
-  <body onload="loadXML()">
-    <div class="col-7">
-      <h2 style="text-align: center">DISPLAY STUDENTS</h2>
-      \
-      <div id="dis"></div>
-      <table id="table" border="1%"></table>
+  <body>
+    <h2 style="text-align: center">Student Details</h2>
+    <div id="content">
+      <table id="participants">
+        <thead>
+          <tr>
+            <th>Participant Name</th>
+            <br />
+            <br />
+            <th>University</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
-    <script type="text/javascript">
-      /*--JS for DOM Parser--*/
 
-      var xmlDoc;
-      var xmlFile = "form1.xml";
+    <script>
+      let xmlContent = "";
+      let tableparticipants = document.getElementById("participants");
+      fetch("form1.xml").then((response) => {
+        response.text().then((xml) => {
+          xmlContent = xml;
 
-      //function to load xml doc
-      function loadXML() {
-        var xmlReq = new XMLHttpRequest();
-        xmlReq.onreadystatechange = function () {
-          console.log(xmlReq.readyState);
-          if (xmlReq.readyState == 4 && xmlReq.status == 200) {
-            //xml doc successfully retrieved
-            xmlDoc = xmlReq.responseXML;
-            myFunction();
-          }
-        };
-        xmlReq.open("GET", xmlFile, true);
-        xmlReq.send();
-      }
+          let parser = new DOMParser();
+          let xmlDOM = parser.parseFromString(xmlContent, "application/xml");
+          let student = xmlDOM.querySelectorAll("COMPUTER-SCIENCE");
 
-      function myFunction(xml) {
-        document.getElementById("dis").innerHTML =
-          xmlDoc.getElementsByTagName("STU-NAME")[0].nodeName;
-      }
+          student.forEach((participantsXmlNode) => {
+            let row = document.createElement("tr");
+
+            //participants name
+            let td = document.createElement("td");
+            td.innerText = participantsXmlNode.children[0].innerHTML;
+            row.appendChild(td);
+
+            //university
+            td = document.createElement("td");
+            td.innerText = participantsXmlNode.children[1].innerHTML;
+            row.appendChild(td);
+
+            tableparticipants.children[1].appendChild(row);
+          });
+        });
+      });
     </script>
   </body>
 </html>
