@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!--ng-app directive tells AngularJS that myApp
-	is the root element of the application -->
 <html ng-app="myApp">
   <head>
     <!--import the angularjs libraries-->
@@ -32,7 +30,7 @@
     <div class="row">
       <script type="text/ng-template" id="aboutus.html">
         <br>
-        <h1 style="color:red;text-align:center">TWOTWOFOUR</h1>
+        <h1 style="color:red;text-align:center">BULLFROGS</h1>
         <h2 style="color:black;text-align:center" class="form-control col-8">
             MANAGING TEAMS
         </h2>
@@ -65,9 +63,8 @@
 
                         </th>
                         <th scope="col">Address<br>
-
                         </th>
-                        <th scope="col">Type<br>
+                        <th scope="col">Play Position<br>
 
                         </th>
                         <th scope="col">Contact No<br>
@@ -96,7 +93,7 @@
             third controller
         -->
       <script type="text/ng-template" id="data.html">
-        <div style="text-align: center;font-family: timesnewroman;font-size: 40px">PLAYER DETAILS</div>
+        <div style="text-align: center;font-family: timesnewroman;font-size: 40px">PLAYER INFORMATION</div>
         <div class="row form-group" style="text-align: center">
             <div class="col-4"></div>
             <div class="col-4">Search<br><input class="form-control" type="text" placeholder="Search " ng-model="find"></div>
@@ -104,7 +101,7 @@
         </div>
         <div class="row form-group">
             <div class="col-5"></div>
-            <div class="col-2" style="text-align: center">STATUS:{1-busy/0-free}<input class="form-control" class="input" type="number" min="0" max="1" ng-model="search.status"></div>
+            <div class="col-2" style="text-align: center">STATUS:{1-Attending/0-Not Attending}<input class="form-control" class="input" type="number" min="0" max="1" ng-model="search.status"></div>
             <div class="col-5"></div>
         </div>
         <div class="row">
@@ -114,27 +111,27 @@
                         <th scope="col">
                             <div>
                                 ROWS :<br><input type="number" ng-model="rowlimit">
-
                             </div>
                         </th>
                         <th scope="col">Name<br>
-                            <input type="text" ng-model="search.name">
-                        </th>
-                        <th scope="col">Date of Birth<br>
-                            <input type="text" ng-model="search.doj">
-                        </th>
-                        <th scope="col">Salary<br>
-                            <input type="text" ng-model="search.price">
-                        </th>
-                        <th scope="col">Address<br>
-                            <input type="text" ng-model="search.location">
-                        </th>
-                        <th scope="col">Type<br>
-                            <input type="text" ng-model="search.type">
-                        </th>
-                        <th scope="col">Contact No<br>
-                            <input type="text" ng-model="find2.contact">
-                        </th>
+                          <input type="text" ng-model="search.name">
+                      </th>
+                      <th scope="col">Date of Birth<br>
+                          <input type="text" ng-model="search.dob">
+                      </th>
+
+                      <th scope="col">Salary<br>
+                          <input type="text" ng-model="search.price">
+                      </th>
+                      <th scope="col">Address<br>
+                          <input type="text" ng-model="search.location">
+                      </th>
+                      <th scope="col">Play Position<br>
+                        <input type="text" ng-model="search.location">
+                      </th>
+                      <th scope="col">Contact No<br>
+                          <input type="text" ng-model="find2.contact">
+                      </th>
 
                     </tr>
                 </thead>
