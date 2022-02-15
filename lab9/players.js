@@ -25,7 +25,7 @@ app.config(function($routeProvider) {
 
 
 app.controller('FirstController', function($scope) {
-    $scope.message = ' TWOTWOFOUR helps in organising schedule for training and competition.It\'s easy to use, nice, beautiful and awesome';
+    $scope.message = ' Bullfrogs helps in organising schedule for training and competition.It\'s easy to use, nice, beautiful and awesome';
 });
 
 
