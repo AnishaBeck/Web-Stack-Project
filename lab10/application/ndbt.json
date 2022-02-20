@@ -1,0 +1,52 @@
+{
+    "managers": [
+        {
+            "name": "Akshaya",
+            "email": "akshayagmail.com",
+            "phone": "9148827639",
+            "role": "Executive",
+            "performance": 0.92,
+            "salary": 20000
+        },
+        {
+            "name": "Pavan",
+            "email": "pavan@gmail.com",
+            "phone": "9100997798",
+            "role": "Intern",
+            "performance": 0.65,
+            "salary": 12000
+        },
+        {
+            "name": "Ashwin",
+            "email": "ashwin@gmail.com",
+            "phone": "9800657341",
+            "role": "Executive",
+            "performance": 0.78,
+            "salary": 23000
+        },
+        {
+            "name": "Vaishnavi",
+            "email": "vaishnavi@gmail.com",
+            "phone": "8935667832",
+            "role": "HR",
+            "performance": 0.91,
+            "salary": 21300
+        },
+        {
+            "name": "Pooja",
+            "email": "pooja@gmail.com",
+            "phone": "91009902",
+            "role": "Intern",
+            "performance": 0.87,
+            "salary": 12000
+        },
+        {
+            "name": "Anisha",
+            "email": "anisha@gmail.com",
+            "phone": "9167990012",
+            "role": "Intern",
+            "performance": 0.78,
+            "salary": 10000
+        }
+    ]
+}
