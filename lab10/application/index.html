@@ -19,7 +19,7 @@
         crossorigin="anonymous"></script>
 </head>
 <body ng-app="myapp" ng-controller="tableController">
-    this is test
+    
     <table class="table table-stripe" >
         <thead><tr>
           <th>Name</th>
@@ -48,7 +48,7 @@
       <script>
         var app = angular.module('myapp', []);
         app.controller('tableController', function($scope, $http) {
-            $http.get('https://raw.githubusercontent.com/Joseph-k-iype/html/master/lab10/myapp/database.json')
+            $http.get('https://github.com/AnishaBeck/Web-Stack-Project/blob/49aa2da4be1876eac74b1a6ac9a24211dee5b417/lab10/application/dbt.json')
                 .success(function(response) {
                     $scope.managers = response.managers;
                 });
@@ -56,3 +56,7 @@
         </script>
 </body>
 </html>
+
+
+
+
